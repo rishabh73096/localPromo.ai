@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo } from "react";
-import { Globe2, Landmark, MapPinned } from "lucide-react";
+import { IconWorld as Globe2, IconBuildingBank as Landmark, IconMapPinFilled as MapPinned } from "@tabler/icons-react";
 import { FormField, TextField } from "@/components/ui/form-field";
 import { SelectField } from "@/components/ui/select-field";
 import { COUNTRY_LIST, citiesOf, findCountry, findState, postalLabel, statesOf } from "@/lib/address";

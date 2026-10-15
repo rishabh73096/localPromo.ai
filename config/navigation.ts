@@ -1,11 +1,11 @@
 import type { Role } from "@/config/auth";
 import type { Feature } from "@/lib/plans";
-import { CalendarDays, FileText, House, LayoutTemplate, Megaphone, Palette, Repeat, Settings, ShieldCheck, Tag, Users, Wallet, Wand2, type LucideIcon } from "lucide-react";
+import { IconCalendarEvent as CalendarDays, IconFileText as FileText, IconHome as House, IconLayoutDashboard as LayoutTemplate, IconSpeakerphone as Megaphone, IconPalette as Palette, IconRepeat as Repeat, IconSettings as Settings, IconShieldCheck as ShieldCheck, IconTag as Tag, IconUsers as Users, IconWallet as Wallet, IconWand as Wand2, type Icon as TablerIcon } from "@tabler/icons-react";
 
 export interface NavItem {
   label: string;
   href: string;
-  icon: LucideIcon;
+  icon: TablerIcon;
   roles: Role[];
   gap?: boolean;
   /** Platform-admin only (the SaaS owner), not a workspace role. */

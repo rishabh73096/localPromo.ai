@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState, type ReactNode } from "react";
-import { CloudUpload } from "lucide-react";
+import { IconCloudUpload as CloudUpload } from "@tabler/icons-react";
 import { notify } from "@/lib/toast";
 import { cn } from "@/lib/utils";
 

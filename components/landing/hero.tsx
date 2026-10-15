@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowDown, ArrowRight, Sparkles } from "lucide-react";
+import { IconArrowDown as ArrowDown, IconArrowRight as ArrowRight, IconSparkles as Sparkles } from "@tabler/icons-react";
 import Image from "next/image";
 
 const WORDS = ["Fill", "your", "shop", "with", "offers", "that", "sell."];

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import { IconArrowLeft as ArrowLeft } from "@tabler/icons-react";
 import { LandingFooter } from "@/components/landing/sections";
 import { Logo } from "@/components/ui/logo";
 import { JsonLd } from "@/components/seo/json-ld";

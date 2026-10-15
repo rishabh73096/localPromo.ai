@@ -5,13 +5,13 @@ import { useEffect, useRef, useState } from "react";
 import { animate, useInView } from "motion/react";
 import * as m from "motion/react-m";
 import { Area, AreaChart, ResponsiveContainer } from "recharts";
-import type { LucideIcon } from "lucide-react";
+import { type Icon as TablerIcon } from "@tabler/icons-react";
 import { cardIn } from "@/components/ui/motion";
 import { PANEL_SURFACE } from "@/components/ui/panel";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 import { cn } from "@/lib/utils";
 
-export function StatCard({ icon: Icon, label, value, sub, spark, tone, href }: { icon: LucideIcon; label: string; value: string; sub?: string; spark?: number[]; tone?: "red"; href?: string }) {
+export function StatCard({ icon: Icon, label, value, sub, spark, tone, href }: { icon: TablerIcon; label: string; value: string; sub?: string; spark?: number[]; tone?: "red"; href?: string }) {
   const body = (
     <m.div variants={cardIn} whileHover={{ y: -3 }} whileTap={href ? { scale: 0.985 } : undefined} transition={{ type: "spring", stiffness: 400, damping: 30 }} className={cn(PANEL_SURFACE, "viz group relative h-full overflow-hidden p-4 sm:p-5 transition-shadow hover:shadow-md", href && "cursor-pointer")}>
       <span className={cn("relative flex size-9 items-center justify-center rounded-lg sm:size-10 transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-110", tone === "red" ? "bg-[#fde0e0] text-[#c2262e]" : "bg-[#fde8ea] text-[#b91c3c]")}>

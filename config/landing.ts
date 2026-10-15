@@ -1,4 +1,4 @@
-import { CalendarDays, Coffee, Dumbbell, Heart, Languages, Megaphone, MessageCircle, Palette, PartyPopper, Scissors, ShoppingBag, Sparkles, Store, Tag, Wand2 } from "lucide-react";
+import { IconCalendarEvent as CalendarDays, IconCoffee as Coffee, IconBarbell as Dumbbell, IconHeart as Heart, IconLanguage as Languages, IconSpeakerphone as Megaphone, IconMessageCircle as MessageCircle, IconPalette as Palette, IconConfetti as PartyPopper, IconScissors as Scissors, IconShoppingBag as ShoppingBag, IconSparkles as Sparkles, IconBuildingStore as Store, IconTag as Tag, IconWand as Wand2 } from "@tabler/icons-react";
 import type { LandingContent } from "@/types/landing";
 
 export const LANDING: LandingContent = {

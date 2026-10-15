@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { TriangleAlert } from "lucide-react";
+import { IconAlertTriangle as TriangleAlert } from "@tabler/icons-react";
 import { Button } from "@/components/ui/button";
 
 export default function DashboardError({ error, reset }: { error: Error & { digest?: string }; reset: () => void }) {

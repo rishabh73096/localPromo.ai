@@ -1,4 +1,4 @@
-import { Megaphone } from "lucide-react";
+import { IconSpeakerphone as Megaphone } from "@tabler/icons-react";
 
 export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3012").replace(/\/$/, "");
 

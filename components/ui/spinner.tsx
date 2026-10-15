@@ -1,4 +1,4 @@
-import { Check, Loader2 } from "lucide-react";
+import { IconCheck as Check, IconLoader2 as Loader2 } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
 
 export function Spinner({ className }: { className?: string }) {
@@ -21,7 +21,7 @@ export function StatusBadge({ state, className }: { state: "loading" | "done"; c
     <Loader2 aria-hidden className={cn("animate-spin text-slate-400", className)} style={{ width: "var(--check-size, 16px)", height: "var(--check-size, 16px)" }} />
   ) : (
     <span aria-hidden className={cn("flex items-center justify-center rounded-full bg-[var(--success)] text-white", className)} style={{ width: "var(--check-size, 16px)", height: "var(--check-size, 16px)" }}>
-      <Check className="size-[70%]" strokeWidth={3} />
+      <Check className="size-[70%]" stroke={3} />
     </span>
   );
 }

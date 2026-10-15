@@ -1,4 +1,4 @@
-import { Coffee, Dumbbell, Gift, PartyPopper, Scissors, ShoppingBag, Sparkles, Store } from "lucide-react";
+import { IconCoffee as Coffee, IconBarbell as Dumbbell, IconGift as Gift, IconConfetti as PartyPopper, IconScissors as Scissors, IconShoppingBag as ShoppingBag, IconSparkles as Sparkles, IconBuildingStore as Store } from "@tabler/icons-react";
 
 const ITEMS = [
   { label: "Salon offers", icon: Scissors },

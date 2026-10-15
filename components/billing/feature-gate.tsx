@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { Check, Lock, Sparkles } from "lucide-react";
+import { IconCheck as Check, IconLock as Lock, IconSparkles as Sparkles } from "@tabler/icons-react";
 import { PageSkeleton } from "@/components/dashboard/page-skeleton";
 import { buttonVariants } from "@/components/ui/button";
 import { FEATURE_LABELS, PLAN_FEATURES, lowestPlanWith, type Feature } from "@/lib/plans";

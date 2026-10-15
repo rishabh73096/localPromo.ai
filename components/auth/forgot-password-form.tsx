@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { Check, Clock, KeyRound, Lock, Mail, Smartphone } from "lucide-react";
+import { IconCheck as Check, IconClock as Clock, IconKey as KeyRound, IconLock as Lock, IconMail as Mail, IconDeviceMobile as Smartphone } from "@tabler/icons-react";
 import * as authService from "@/services/auth";
 import { codeSchema, forgotPasswordSchema, newPasswordSchema } from "@/lib/schemas";
 import { notify } from "@/lib/toast";

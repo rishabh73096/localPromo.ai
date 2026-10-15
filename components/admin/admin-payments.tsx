@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Ban, Check, Clock, Copy, IndianRupee, Receipt, X } from "lucide-react";
+import { IconBan as Ban, IconCheck as Check, IconClock as Clock, IconCopy as Copy, IconCurrencyRupee as IndianRupee, IconReceipt as Receipt, IconX as X } from "@tabler/icons-react";
 import { Grid } from "@/components/charts/chart-card";
 import { StatCard } from "@/components/charts/stat-card";
 import { DemoBanner, StatusBadge, Table, Who, fmtDateTime, profileOf } from "@/components/admin/admin-ui";

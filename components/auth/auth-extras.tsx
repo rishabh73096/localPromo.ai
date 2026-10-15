@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
-import { ArrowLeft, CircleHelp, ShieldCheck, TriangleAlert, type LucideIcon } from "lucide-react";
+import { IconArrowLeft as ArrowLeft, IconHelpCircle as CircleHelp, IconShieldCheck as ShieldCheck, IconAlertTriangle as TriangleAlert, type Icon as TablerIcon } from "@tabler/icons-react";
 import { SUPPORT_HREF } from "@/config/auth";
 
 export function AuthBackLink({ href = "/login", label = "Back to Sign In", onClick }: { href?: string; label?: string; onClick?: () => void }) {
@@ -22,7 +22,7 @@ export function AuthBackLink({ href = "/login", label = "Back to Sign In", onCli
   );
 }
 
-export function AuthIconBadge({ icon: Icon }: { icon: LucideIcon }) {
+export function AuthIconBadge({ icon: Icon }: { icon: TablerIcon }) {
   return (
     <span className="bg-brand-soft text-brand mb-5 flex size-12 items-center justify-center rounded-xl">
       <Icon className="size-5" />
@@ -93,7 +93,7 @@ export function AuthSpamNotice() {
   );
 }
 
-export function AuthInfoLine({ icon: Icon, children }: { icon: LucideIcon; children: ReactNode }) {
+export function AuthInfoLine({ icon: Icon, children }: { icon: TablerIcon; children: ReactNode }) {
   return (
     <p className="text-brand/90 flex items-center gap-2 text-xs">
       <Icon className="size-3.5 shrink-0" />

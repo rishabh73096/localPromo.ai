@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { AlarmClock, CircleDollarSign, Repeat, TimerOff } from "lucide-react";
+import { IconAlarm as AlarmClock, IconCurrencyDollar as CircleDollarSign, IconRepeat as Repeat, IconClockOff as TimerOff } from "@tabler/icons-react";
 import { Columns } from "@/components/charts/charts";
 import { ChartCard, Grid } from "@/components/charts/chart-card";
 import { StatCard } from "@/components/charts/stat-card";

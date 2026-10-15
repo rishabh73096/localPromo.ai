@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import { IconArrowLeft as ArrowLeft } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
 
 export function RoundBackButton({ href = "/", label = "Back to home", className }: { href?: string; label?: string; className?: string }) {

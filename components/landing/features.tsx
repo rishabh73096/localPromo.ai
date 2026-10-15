@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import * as m from "motion/react-m";
-import { CalendarDays, FileDown, Languages, MessageCircle, Palette, PartyPopper, WifiOff } from "lucide-react";
+import { IconCalendarEvent as CalendarDays, IconFileDownload as FileDown, IconLanguage as Languages, IconMessageCircle as MessageCircle, IconPalette as Palette, IconConfetti as PartyPopper, IconWifiOff as WifiOff } from "@tabler/icons-react";
 import { SectionHead, wrap } from "@/components/landing/heading";
 import { cardIn, gridStagger } from "@/components/ui/motion";
 import { cn } from "@/lib/utils";

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import { Copy, FileText, Trash2, Wand2 } from "lucide-react";
+import { IconCopy as Copy, IconFileText as FileText, IconTrash as Trash2, IconWand as Wand2 } from "@tabler/icons-react";
 import { Badge } from "@/components/ui/badge";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { CountTabs } from "@/components/ui/count-tabs";

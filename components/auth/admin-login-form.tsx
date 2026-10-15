@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { Lock, Mail, ShieldCheck } from "lucide-react";
+import { IconLock as Lock, IconMail as Mail, IconShieldCheck as ShieldCheck } from "@tabler/icons-react";
 import * as authService from "@/services/auth";
 import { isPlatformAdmin } from "@/services/admin";
 import { loginSchema } from "@/lib/schemas";

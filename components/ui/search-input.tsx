@@ -1,7 +1,7 @@
 "use client";
 
 import type { ComponentProps } from "react";
-import { Search, X } from "lucide-react";
+import { IconSearch as Search, IconX as X } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
 
 interface SearchInputProps extends Omit<ComponentProps<"input">, "onChange" | "value" | "size"> {

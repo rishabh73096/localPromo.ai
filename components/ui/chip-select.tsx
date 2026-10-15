@@ -1,6 +1,6 @@
 "use client";
 
-import { Check } from "lucide-react";
+import { IconCheck as Check } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
 
 export function ChipSelect({ options, value, onChange, disabled, label }: { options: readonly string[]; value: string[]; onChange: (next: string[]) => void; disabled?: boolean; label: string }) {
@@ -12,7 +12,7 @@ export function ChipSelect({ options, value, onChange, disabled, label }: { opti
         const on = value.includes(o);
         return (
           <button key={o} type="button" aria-pressed={on} disabled={disabled} onClick={() => toggle(o)} className={cn("inline-flex h-8 items-center gap-1.5 rounded-lg border px-3 text-xs font-medium transition-colors disabled:opacity-60", on ? "border-[#b91c3c]/40 bg-[#fde8ea] text-[#8a1230]" : "border-slate-200 bg-white text-slate-600 hover:border-slate-300")}>
-            {on ? <Check className="size-3" strokeWidth={3} /> : null}
+            {on ? <Check className="size-3" stroke={3} /> : null}
             {o}
           </button>
         );

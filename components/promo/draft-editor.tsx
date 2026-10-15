@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
-import { ArrowLeft, CalendarClock, Copy, Download, RefreshCw, Trash2 } from "lucide-react";
+import { IconArrowLeft as ArrowLeft, IconCalendarTime as CalendarClock, IconCopy as Copy, IconDownload as Download, IconRefresh as RefreshCw, IconTrash as Trash2 } from "@tabler/icons-react";
 import { Poster, POSTER_SIZES, downloadPoster } from "@/components/promo/poster";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";

@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useInView, useScroll, useSpring } from "motion/react";
 import * as m from "motion/react-m";
-import { CalendarDays, Check, Palette, Tag, Wand2 } from "lucide-react";
+import { IconCalendarEvent as CalendarDays, IconCheck as Check, IconPalette as Palette, IconTag as Tag, IconWand as Wand2 } from "@tabler/icons-react";
 import { SectionHead, wrap } from "@/components/landing/heading";
 import { cn } from "@/lib/utils";
 

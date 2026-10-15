@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { CalendarPlus, Clock, Repeat, Users } from "lucide-react";
+import { IconCalendarPlus as CalendarPlus, IconClock as Clock, IconRepeat as Repeat, IconUsers as Users } from "@tabler/icons-react";
 import { Grid } from "@/components/charts/chart-card";
 import { StatCard } from "@/components/charts/stat-card";
 import { DemoBanner, StatusBadge, Table, Who, fmtDate } from "@/components/admin/admin-ui";

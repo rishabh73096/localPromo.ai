@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, CalendarClock, CalendarHeart, CheckCircle2, FileText, Megaphone, Wand2 } from "lucide-react";
+import { IconArrowRight as ArrowRight, IconCalendarTime as CalendarClock, IconCalendarHeart as CalendarHeart, IconCircleCheck as CheckCircle2, IconFileText as FileText, IconSpeakerphone as Megaphone, IconWand as Wand2 } from "@tabler/icons-react";
 import { AreaTrend, BarsH } from "@/components/charts/charts";
 import { ChartCard, Grid } from "@/components/charts/chart-card";
 import { StatCard } from "@/components/charts/stat-card";

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Check, ChevronDown } from "lucide-react";
+import { IconCheck as Check, IconChevronDown as ChevronDown } from "@tabler/icons-react";
 import * as m from "motion/react-m";
 import { SectionHead, wrap } from "@/components/landing/heading";
 import Image from "next/image";

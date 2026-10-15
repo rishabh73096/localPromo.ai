@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { IconMenu2 as Menu, IconX as X } from "@tabler/icons-react";
 import { Logo } from "@/components/ui/logo";
 import { cn } from "@/lib/utils";
 

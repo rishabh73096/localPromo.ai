@@ -5,7 +5,7 @@ import { ChartCard, Grid } from "@/components/charts/chart-card";
 import { useAdminData } from "@/services/admin";
 import { PageHeader } from "@/components/ui/page-header";
 import { Panel } from "@/components/ui/panel";
-import { Check, Minus } from "lucide-react";
+import { IconCheck as Check, IconMinus as Minus } from "@tabler/icons-react";
 import { LANDING } from "@/config/landing";
 import { ALL_FEATURES, FEATURE_LABELS, planHas } from "@/lib/plans";
 import { UPI_PAYEE, UPI_VPA } from "@/lib/upi";

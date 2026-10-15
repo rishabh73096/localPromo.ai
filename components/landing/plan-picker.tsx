@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { Check, Clock, Smartphone } from "lucide-react";
+import { IconCheck as Check, IconClock as Clock, IconDeviceMobile as Smartphone } from "@tabler/icons-react";
 import { QRCodeSVG } from "qrcode.react";
 import { Logo } from "@/components/ui/logo";
 import { Button } from "@/components/ui/button";

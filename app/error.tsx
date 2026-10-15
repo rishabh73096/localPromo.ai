@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import Link from "next/link";
-import { TriangleAlert } from "lucide-react";
+import { IconAlertTriangle as TriangleAlert } from "@tabler/icons-react";
 import { Logo } from "@/components/ui/logo";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";

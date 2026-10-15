@@ -2,7 +2,7 @@
 
 import { Children, Fragment, isValidElement, useEffect, useId, useMemo, useRef, useState, type ChangeEvent, type ComponentProps, type ReactNode } from "react";
 import { createPortal } from "react-dom";
-import { Check, ChevronDown, Search, type LucideIcon } from "lucide-react";
+import { IconCheck as Check, IconChevronDown as ChevronDown, IconSearch as Search, type Icon as TablerIcon } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
 
 interface Option { value: string; label: string; disabled?: boolean }
@@ -21,7 +21,7 @@ function collect(children: ReactNode): Option[] {
 
 const WRAPPER_CLASS = /^(?:[a-z0-9-]+:)*(?:w|min-w|max-w|flex|shrink|grow|m[trblxy]?|col|row|self)-/;
 
-type Props = Omit<ComponentProps<"select">, "value" | "onChange" | "children" | "multiple"> & { icon?: LucideIcon; value?: string; onChange?: (e: ChangeEvent<HTMLSelectElement>) => void; children?: ReactNode; searchable?: boolean };
+type Props = Omit<ComponentProps<"select">, "value" | "onChange" | "children" | "multiple"> & { icon?: TablerIcon; value?: string; onChange?: (e: ChangeEvent<HTMLSelectElement>) => void; children?: ReactNode; searchable?: boolean };
 
 export function SelectField({ icon: Icon, className, children, value = "", onChange, onBlur, disabled, id, name, searchable, ...aria }: Props) {
   const options = useMemo(() => collect(children), [children]);
@@ -143,7 +143,7 @@ export function SelectField({ icon: Icon, className, children, value = "", onCha
                   return (
                     <li key={`${o.value}-${i}`} role="option" aria-selected={on} aria-disabled={o.disabled} data-index={i} onMouseEnter={() => setActive(i)} onMouseDown={(e) => e.preventDefault()} onClick={() => pick(o)} className={cn("flex cursor-pointer items-center justify-between gap-2 rounded-lg px-3 py-2", i === active && "bg-[#f7efe6]", on && "font-semibold text-[#b91c3c]", o.disabled && "cursor-not-allowed opacity-40")}>
                       <span className="truncate">{o.label}</span>
-                      {on ? <Check className="size-3.5 shrink-0" strokeWidth={3} /> : null}
+                      {on ? <Check className="size-3.5 shrink-0" stroke={3} /> : null}
                     </li>
                   );
                 })}

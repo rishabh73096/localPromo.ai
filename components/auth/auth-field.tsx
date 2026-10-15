@@ -1,5 +1,5 @@
 import type { ComponentProps, ReactNode } from "react";
-import type { LucideIcon } from "lucide-react";
+import { type Icon as TablerIcon } from "@tabler/icons-react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { PasswordInput } from "@/components/ui/password-input";
@@ -33,7 +33,7 @@ export function AuthField({ label, htmlFor, aside, error, hint, className, label
   );
 }
 
-export function AuthInput({ icon: Icon, className, ...props }: { icon?: LucideIcon } & ComponentProps<typeof Input>) {
+export function AuthInput({ icon: Icon, className, ...props }: { icon?: TablerIcon } & ComponentProps<typeof Input>) {
   return (
     <div className="relative">
       {Icon ? <Icon className="pointer-events-none absolute top-1/2 left-4 size-4 -translate-y-1/2 text-slate-400" /> : null}
@@ -42,7 +42,7 @@ export function AuthInput({ icon: Icon, className, ...props }: { icon?: LucideIc
   );
 }
 
-export function AuthPasswordInput({ icon: Icon, className, ...props }: { icon?: LucideIcon } & Omit<ComponentProps<typeof PasswordInput>, "type">) {
+export function AuthPasswordInput({ icon: Icon, className, ...props }: { icon?: TablerIcon } & Omit<ComponentProps<typeof PasswordInput>, "type">) {
   return (
     <div className="relative">
       {Icon ? <Icon className="pointer-events-none absolute top-1/2 left-4 size-4 -translate-y-1/2 text-slate-400" /> : null}

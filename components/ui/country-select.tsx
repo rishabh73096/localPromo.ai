@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { Check, ChevronDown, Search } from "lucide-react";
+import { IconCheck as Check, IconChevronDown as ChevronDown, IconSearch as Search } from "@tabler/icons-react";
 import { COUNTRIES, type Country } from "@/lib/countries";
 import { cn } from "@/lib/utils";
 

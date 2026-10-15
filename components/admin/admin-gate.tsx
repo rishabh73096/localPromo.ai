@@ -3,7 +3,7 @@
 import { useEffect, type ReactNode } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { Lock } from "lucide-react";
+import { IconLock as Lock } from "@tabler/icons-react";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { PageLoader } from "@/components/ui/spinner";
 import { GUARDS_ENABLED } from "@/config/auth";

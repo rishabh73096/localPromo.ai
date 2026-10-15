@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { CalendarHeart } from "lucide-react";
+import { IconCalendarHeart as CalendarHeart } from "@tabler/icons-react";
 import * as m from "motion/react-m";
 import { SectionHead, wrap } from "@/components/landing/heading";
 import { useMounted } from "@/hooks/use-mounted";

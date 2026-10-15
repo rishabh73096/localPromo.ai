@@ -1,7 +1,7 @@
 "use client";
 
 import * as m from "motion/react-m";
-import { CalendarDays, MessageCircle } from "lucide-react";
+import { IconCalendarEvent as CalendarDays, IconMessageCircle as MessageCircle } from "@tabler/icons-react";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 
 // A small, looping preview of one campaign: poster, two captions, a WhatsApp bubble and a scheduled post.

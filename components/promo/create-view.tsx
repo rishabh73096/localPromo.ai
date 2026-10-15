@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
-import { Sparkles, Wand2 } from "lucide-react";
+import { IconSparkles as Sparkles, IconWand as Wand2 } from "@tabler/icons-react";
 import { Button } from "@/components/ui/button";
 import { FormField, TextField } from "@/components/ui/form-field";
 import { PageHeader } from "@/components/ui/page-header";

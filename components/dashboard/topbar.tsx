@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { Bell, ChevronDown, LogIn, LogOut, Menu, PanelLeftClose, PanelLeftOpen, RotateCw, Search, X } from "lucide-react";
+import { IconBell as Bell, IconChevronDown as ChevronDown, IconLogin as LogIn, IconLogout as LogOut, IconMenu2 as Menu, IconLayoutSidebarLeftCollapse as PanelLeftClose, IconLayoutSidebarLeftExpand as PanelLeftOpen, IconRotateClockwise2 as RotateCw, IconSearch as Search, IconX as X } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
 import { GlobalSearch } from "@/components/dashboard/global-search";
 import { Avatar } from "@/components/ui/avatar";

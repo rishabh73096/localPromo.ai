@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, type ReactNode } from "react";
 import { createPortal } from "react-dom";
-import { X } from "lucide-react";
+import { IconX as X } from "@tabler/icons-react";
 import { useEscapeKey } from "@/hooks/use-escape-key";
 import { useLockBodyScroll } from "@/hooks/use-lock-body-scroll";
 import { cn } from "@/lib/utils";

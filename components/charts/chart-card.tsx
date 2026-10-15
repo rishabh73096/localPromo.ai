@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, type ReactNode } from "react";
-import { Table2 } from "lucide-react";
+import { IconTable as Table2 } from "@tabler/icons-react";
 import * as m from "motion/react-m";
 import { cardIn, gridStagger } from "@/components/ui/motion";
 import { PANEL_SURFACE } from "@/components/ui/panel";

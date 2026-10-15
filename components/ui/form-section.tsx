@@ -1,8 +1,8 @@
 import type { ReactNode } from "react";
-import type { LucideIcon } from "lucide-react";
+import { type Icon as TablerIcon } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
 
-export function FormSection({ icon: Icon, title, description, children, className, aside }: { icon: LucideIcon; title: string; description: string; children: ReactNode; className?: string; aside?: ReactNode }) {
+export function FormSection({ icon: Icon, title, description, children, className, aside }: { icon: TablerIcon; title: string; description: string; children: ReactNode; className?: string; aside?: ReactNode }) {
   return (
     <section className={cn("rounded-2xl border border-slate-100 bg-white p-5 shadow-[0_2px_12px_-6px_rgba(15,17,41,0.12)] sm:p-7", className)}>
       <div className="mb-6 flex items-start justify-between gap-3">

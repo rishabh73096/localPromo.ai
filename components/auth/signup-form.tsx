@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { Lock, Mail } from "lucide-react";
+import { IconLock as Lock, IconMail as Mail } from "@tabler/icons-react";
 import * as authService from "@/services/auth";
 import { signupSchema } from "@/lib/schemas";
 import { notify } from "@/lib/toast";

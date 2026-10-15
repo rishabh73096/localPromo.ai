@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { CalendarHeart } from "lucide-react";
+import { IconCalendarHeart as CalendarHeart } from "@tabler/icons-react";
 import { UpgradeCard } from "@/components/billing/feature-gate";
 import { Badge } from "@/components/ui/badge";
 import { PageHeader } from "@/components/ui/page-header";

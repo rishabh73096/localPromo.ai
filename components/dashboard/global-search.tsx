@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState, type KeyboardEvent } from "react";
 import { useRouter } from "next/navigation";
-import { CornerDownLeft, type LucideIcon } from "lucide-react";
+import { IconCornerDownLeft as CornerDownLeft, type Icon as TablerIcon } from "@tabler/icons-react";
 import { SearchInput } from "@/components/ui/search-input";
 import { visibleNav, type NavArea } from "@/config/navigation";
 import { useRole } from "@/hooks/use-role";
@@ -16,7 +16,7 @@ interface Result {
   title: string;
   subtitle?: string;
   href: string;
-  icon: LucideIcon;
+  icon: TablerIcon;
   haystack: string;
 }
 

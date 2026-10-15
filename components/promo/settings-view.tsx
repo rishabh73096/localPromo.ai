@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Check, CreditCard, FileText, Lock, Megaphone, UserRound } from "lucide-react";
+import { IconCheck as Check, IconCreditCard as CreditCard, IconFileText as FileText, IconLock as Lock, IconSpeakerphone as Megaphone, IconUserCircle as UserRound } from "@tabler/icons-react";
 import { Grid } from "@/components/charts/chart-card";
 import { StatCard } from "@/components/charts/stat-card";
 import { buttonVariants } from "@/components/ui/button";

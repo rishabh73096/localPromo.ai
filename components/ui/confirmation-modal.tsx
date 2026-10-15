@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, type ReactNode } from "react";
-import { AlertTriangle, Trash2, X } from "lucide-react";
+import { IconAlertTriangle as AlertTriangle, IconTrash as Trash2, IconX as X } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Spinner } from "@/components/ui/spinner";

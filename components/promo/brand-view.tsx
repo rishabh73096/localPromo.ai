@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Palette, Store } from "lucide-react";
+import { IconPalette as Palette, IconBuildingStore as Store } from "@tabler/icons-react";
 import { Poster } from "@/components/promo/poster";
 import { Button } from "@/components/ui/button";
 import { ChipSelect } from "@/components/ui/chip-select";

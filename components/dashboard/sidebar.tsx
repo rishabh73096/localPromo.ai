@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ArrowRight, Headset } from "lucide-react";
+import { IconArrowRight as ArrowRight, IconHeadset as Headset } from "@tabler/icons-react";
 import { visibleNav, type NavArea } from "@/config/navigation";
 import { useRole } from "@/hooks/use-role";
 import { useAuthState } from "@/context/AuthContext";

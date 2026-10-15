@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, CircleDollarSign, Clock, Repeat, Users } from "lucide-react";
+import { IconArrowRight as ArrowRight, IconCurrencyDollar as CircleDollarSign, IconClock as Clock, IconRepeat as Repeat, IconUsers as Users } from "@tabler/icons-react";
 import { DemoBanner, PLAN_PRICE, Table, Who, fmtDateTime, profileOf } from "@/components/admin/admin-ui";
 import { BarsH, Columns } from "@/components/charts/charts";
 import { ChartCard, Grid } from "@/components/charts/chart-card";

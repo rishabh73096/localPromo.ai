@@ -1,5 +1,5 @@
 import type { ComponentProps, ElementType, ReactNode } from "react";
-import type { LucideIcon } from "lucide-react";
+import { type Icon as TablerIcon } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
 
 export const PANEL_SURFACE = "rounded-[22px] border border-black/[0.06] bg-white shadow-[0_1px_2px_rgba(30,20,10,0.03)]";
@@ -11,7 +11,7 @@ export function Panel<T extends ElementType = "div">({ as, className, ...props }
   return <Tag className={cn(PANEL_SURFACE, className)} {...props} />;
 }
 
-export function PanelHeader({ title, description, icon: Icon, aside, className }: { title: ReactNode; description?: ReactNode; icon?: LucideIcon; aside?: ReactNode; className?: string }) {
+export function PanelHeader({ title, description, icon: Icon, aside, className }: { title: ReactNode; description?: ReactNode; icon?: TablerIcon; aside?: ReactNode; className?: string }) {
   return (
     <div className={cn("flex items-start justify-between gap-3", className)}>
       <div className="flex items-start gap-3">

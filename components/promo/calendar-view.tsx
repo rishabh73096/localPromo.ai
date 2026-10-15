@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import { CalendarDays } from "lucide-react";
+import { IconCalendarEvent as CalendarDays } from "@tabler/icons-react";
 import { Badge } from "@/components/ui/badge";
 import { NativeSelect } from "@/components/ui/native-select";
 import { MonthCalendar } from "@/components/ui/month-calendar";

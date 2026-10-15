@@ -1,6 +1,6 @@
-import type { LucideIcon } from "lucide-react";
+import { type Icon as TablerIcon } from "@tabler/icons-react";
 
-export function PagePlaceholder({ title, description, icon: Icon }: { title: string; description: string; icon: LucideIcon }) {
+export function PagePlaceholder({ title, description, icon: Icon }: { title: string; description: string; icon: TablerIcon }) {
   return (
     <div>
       <h1 className="text-2xl font-semibold tracking-tight text-ink sm:text-3xl">{title}</h1>

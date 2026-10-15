@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, type ComponentProps } from "react";
-import { Eye, EyeOff } from "lucide-react";
+import { IconEye as Eye, IconEyeOff as EyeOff } from "@tabler/icons-react";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 

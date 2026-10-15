@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ChevronRight } from "lucide-react";
+import { IconChevronRight as ChevronRight } from "@tabler/icons-react";
 import type { LinkItem } from "@/types/content";
 import { cn } from "@/lib/utils";
 

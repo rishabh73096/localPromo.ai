@@ -1,6 +1,6 @@
 "use client";
 
-import { Check } from "lucide-react";
+import { IconCheck as Check } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
 
 export const PASSWORD_RULES = [

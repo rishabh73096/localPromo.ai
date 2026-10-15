@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { CheckCircle2, Gauge, RotateCw, WifiOff } from "lucide-react";
+import { IconCircleCheck as CheckCircle2, IconGauge as Gauge, IconRotateClockwise2 as RotateCw, IconWifiOff as WifiOff } from "@tabler/icons-react";
 import { useOnline } from "@/hooks/use-online";
 import { useSlowNetwork } from "@/lib/network";
 import { cn } from "@/lib/utils";

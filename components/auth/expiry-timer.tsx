@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Clock } from "lucide-react";
+import { IconClock as Clock } from "@tabler/icons-react";
 
 export function ExpiryTimer({ seconds }: { seconds: number }) {
   const [left, setLeft] = useState(seconds);

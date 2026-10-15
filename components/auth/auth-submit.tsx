@@ -1,6 +1,6 @@
 import type { ComponentProps, ReactNode } from "react";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { IconArrowRight as ArrowRight } from "@tabler/icons-react";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 

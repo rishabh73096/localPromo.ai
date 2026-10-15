@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Megaphone, Tag, Trash2, Wand2 } from "lucide-react";
+import { IconSpeakerphone as Megaphone, IconTag as Tag, IconTrash as Trash2, IconWand as Wand2 } from "@tabler/icons-react";
 import { Badge } from "@/components/ui/badge";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { DataTable, type Column } from "@/components/ui/data-table";

@@ -1,4 +1,4 @@
-import { Activity, BadgeCheck, BatteryCharging, Bot, Calculator, Camera, Car, Check, Clock, Cog, FileText, Fuel, Gauge, Gavel, Headset, Heart, House, Landmark, LayoutGrid, Lock, MapPin, MessageCircle, Rotate3d, ScanBarcode, ScanEye, Share2, ShieldCheck, ShieldHalf, ShoppingBag, ShoppingCart, Sparkles, Star, Store, TrendingUp, Truck, User, Users, Wrench, Zap, type LucideProps } from "lucide-react";
+import { IconActivity as Activity, IconRosetteDiscountCheck as BadgeCheck, IconBatteryCharging as BatteryCharging, IconRobot as Bot, IconCalculator as Calculator, IconCamera as Camera, IconCar as Car, IconCheck as Check, IconClock as Clock, IconSettings as Cog, IconFileText as FileText, IconGasStation as Fuel, IconGauge as Gauge, IconGavel as Gavel, IconHeadset as Headset, IconHeart as Heart, IconHome as House, IconBuildingBank as Landmark, IconLayoutGrid as LayoutGrid, IconLock as Lock, IconMapPin as MapPin, IconMessageCircle as MessageCircle, IconRotate3d as Rotate3d, IconBarcode as ScanBarcode, IconScan as ScanEye, IconShare as Share2, IconShieldCheck as ShieldCheck, IconShieldHalf as ShieldHalf, IconShoppingBag as ShoppingBag, IconShoppingCart as ShoppingCart, IconSparkles as Sparkles, IconStar as Star, IconBuildingStore as Store, IconTrendingUp as TrendingUp, IconTruck as Truck, IconUser as User, IconUsers as Users, IconTool as Wrench, IconBolt as Zap, type IconProps as TablerProps } from "@tabler/icons-react";
 
 const ICONS = {
   activity: Activity,
@@ -44,7 +44,7 @@ const ICONS = {
 
 export type IconName = keyof typeof ICONS;
 
-export function Icon({ name, ...props }: { name: IconName } & LucideProps) {
+export function Icon({ name, ...props }: { name: IconName } & TablerProps) {
   const Component = ICONS[name] ?? Sparkles;
   return <Component {...props} />;
 }

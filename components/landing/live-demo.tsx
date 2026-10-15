@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Copy } from "lucide-react";
+import { IconCopy as Copy } from "@tabler/icons-react";
 import * as m from "motion/react-m";
 import { SectionHead, wrap } from "@/components/landing/heading";
 import { Poster } from "@/components/promo/poster";

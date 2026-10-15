@@ -2,12 +2,12 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { Coffee, Dumbbell, Scissors, Store, type LucideIcon } from "lucide-react";
+import { IconCoffee as Coffee, IconBarbell as Dumbbell, IconScissors as Scissors, IconBuildingStore as Store, type Icon as TablerIcon } from "@tabler/icons-react";
 import * as m from "motion/react-m";
 import { SectionHead, wrap } from "@/components/landing/heading";
 import { cn } from "@/lib/utils";
 
-const CASES: { key: string; photo: string; label: string; icon: LucideIcon; who: string; scenario: string; offers: string[]; color: string }[] = [
+const CASES: { key: string; photo: string; label: string; icon: TablerIcon; who: string; scenario: string; offers: string[]; color: string }[] = [
   { key: "salon", photo: "/images/biz/salon.jpg", label: "Salon", icon: Scissors, who: "Salon owner", scenario: "Enter a Diwali offer once. Get an English caption, a Hindi caption and a poster in your colours. Reuse the same template for Raksha Bandhan and Karwa Chauth.", offers: ["Weekday glow: 20% off Mon–Thu", "Bridal package with free trial", "Festival facial + hair spa combo"], color: "#d6336c" },
   { key: "gym", photo: "/images/biz/gym.jpg", label: "Gym", icon: Dumbbell, who: "Gym owner", scenario: "Run a New Year membership drive, a free-trial week and a bring-a-friend month from the same brand profile, changing only the price and the dates.", offers: ["3 months + 1 month free", "7-day free trial", "Bring a friend, both get 10% off"], color: "#1c7ed6" },
   { key: "cafe", photo: "/images/biz/cafe.jpg", label: "Cafe", icon: Coffee, who: "Cafe owner", scenario: "Plan a week of daily specials in one sitting. Copy the WhatsApp message for each day, and download a story-size poster for your status.", offers: ["Coffee + sandwich combo", "Buy 1 get 1, 3 to 6 pm", "Festive dessert box"], color: "#e8590c" },
