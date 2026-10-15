@@ -3,7 +3,7 @@ export type Niche = "salon" | "gym" | "cafe" | "retail";
 export type Tone = "friendly" | "premium" | "festive" | "urgent";
 export type DraftStatus = "draft" | "ready" | "scheduled" | "published";
 export type PosterLayout = "bold" | "split" | "frame";
-export type PosterSize = "square" | "story";
+export type PosterSize = "square" | "story" | "wide";
 
 export interface BrandProfile {
   businessName: string;

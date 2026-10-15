@@ -27,6 +27,7 @@ export function LiveDemo() {
   const [layout, setLayout] = useState<PosterLayout>("bold");
   const [variant, setVariant] = useState(0);
   const [photo, setPhoto] = useState(true);
+  const [wide, setWide] = useState(false);
 
   const options = templatesFor(niche);
   const t = options[Math.min(tpl, options.length - 1)];
@@ -69,7 +70,7 @@ export function LiveDemo() {
             <div className="mt-7 rounded-2xl bg-white p-5 text-ink">
               <div className="flex flex-wrap items-center justify-between gap-2">
                 <div role="tablist" aria-label="Caption language" className="inline-flex rounded-xl bg-[#f7efe6] p-1">
-                  {([["en", "English"], ["hi", "हिन्दी"], ["wa", "WhatsApp"]] as [Tab, string][]).map(([v, l]) => <button key={v} role="tab" aria-selected={tab === v} type="button" onClick={() => setTab(v)} className={cn("h-8 rounded-lg px-3.5 text-sm font-medium transition-colors", tab === v ? "bg-white font-semibold shadow-sm" : "text-slate-500")}>{l}</button>)}
+                  {([["en", "English"], ["hi", "हिन्दी"], ["wa", "WhatsApp"]] as [Tab, string][]).map(([v, l]) => <button key={v} role="tab" aria-selected={tab === v} type="button" onClick={() => setTab(v)} className={cn("h-8 rounded-lg px-3.5 text-sm font-medium transition-colors", tab === v ? "bg-white font-semibold shadow-sm" : "text-slate-500")}>{l === "frame" ? "arch" : l}</button>)}
                 </div>
                 <div className="flex gap-2">
                   <button type="button" onClick={() => setVariant((v) => v + 1)} className="h-8 rounded-lg bg-[#f7efe6] px-3 text-xs font-semibold hover:bg-[#f5d9d6]">Another wording</button>
@@ -82,14 +83,17 @@ export function LiveDemo() {
 
           <div className="lg:sticky lg:top-24 lg:self-start">
             <div className="rounded-[2rem] border border-white/10 bg-white/[0.06] p-4 backdrop-blur-md">
-              <m.div key={`${niche}-${layout}-${photo}`} initial={{ opacity: 0, scale: 0.94, rotate: -1.5 }} animate={{ opacity: 1, scale: 1, rotate: 0 }} transition={{ type: "spring", stiffness: 180, damping: 18 }}>
-                <Poster brand={brand} size="square" config={{ layout, headline: t.headline, subline: offerText, cta: t.cta, color: COLOR[niche], image: photo ? PHOTO[niche] : undefined }} className="h-auto w-full rounded-2xl shadow-2xl" />
+              <m.div key={`${niche}-${layout}-${photo}-${wide}`} initial={{ opacity: 0, scale: 0.94, rotate: -1.5 }} animate={{ opacity: 1, scale: 1, rotate: 0 }} transition={{ type: "spring", stiffness: 180, damping: 18 }}>
+                <Poster brand={brand} size={wide ? "wide" : "square"} config={{ layout, headline: t.headline, subline: offerText, cta: t.cta, color: COLOR[niche], image: photo ? PHOTO[niche] : undefined }} className="h-auto w-full rounded-2xl shadow-2xl" />
               </m.div>
               <div className="mt-4 flex items-center justify-between gap-2">
                 <div role="group" aria-label="Poster layout" className="flex gap-1.5">
-                  {(["bold", "split", "frame"] as PosterLayout[]).map((l) => <button key={l} type="button" onClick={() => setLayout(l)} aria-pressed={layout === l} className={cn("h-8 rounded-lg px-3 text-xs font-semibold capitalize transition-colors", layout === l ? "bg-white text-[#1c1210]" : "bg-white/10 text-white/80 hover:bg-white/20")}>{l}</button>)}
+                  {(["bold", "split", "frame"] as PosterLayout[]).map((l) => <button key={l} type="button" onClick={() => setLayout(l)} aria-pressed={layout === l} className={cn("h-8 rounded-lg px-3 text-xs font-semibold capitalize transition-colors", layout === l ? "bg-white text-[#1c1210]" : "bg-white/10 text-white/80 hover:bg-white/20")}>{l === "frame" ? "arch" : l}</button>)}
                 </div>
+                <div className="flex gap-1.5">
+                <button type="button" onClick={() => setWide((v) => !v)} aria-pressed={wide} className={cn("h-8 rounded-lg px-3 text-xs font-semibold transition-colors", wide ? "bg-white text-[#1c1210]" : "bg-white/10 text-white/80 hover:bg-white/20")}>{wide ? "3:2" : "1:1"}</button>
                 <button type="button" onClick={() => setPhoto((v) => !v)} aria-pressed={photo} className={cn("h-8 rounded-lg px-3 text-xs font-semibold transition-colors", photo ? "bg-[#ffd43b] text-[#1c1210]" : "bg-white/10 text-white/80 hover:bg-white/20")}>Photo {photo ? "on" : "off"}</button>
+                </div>
               </div>
             </div>
           </div>

@@ -45,7 +45,7 @@ export function DraftEditor({ id }: { id: string }) {
 function Editor({ draft, brand }: { draft: Draft; brand: ReturnType<typeof useBrand>["brand"] }) {
   const router = useRouter();
   const { can } = usePlan();
-  const svg = useRef<SVGSVGElement>(null);
+  const svg = useRef<HTMLCanvasElement>(null);
   const [d, setD] = useState<Draft>(draft);
   const [tab, setTab] = useState<Tab>(brand.language === "hi" ? "hi" : "en");
   const [size, setSize] = useState<PosterSize>("square");
@@ -152,7 +152,7 @@ function Editor({ draft, brand }: { draft: Draft; brand: ReturnType<typeof useBr
             <Poster ref={svg} brand={brand} config={d.poster} size={size} className={size === "story" ? "max-h-[520px] w-auto rounded-lg" : "h-auto w-full rounded-lg"} />
           </div>
           <div className="mt-5 space-y-4">
-            <Segmented<PosterLayout> label="Layout" value={d.poster.layout} onChange={(layout) => setPoster({ layout })} options={[{ value: "bold", label: "Bold" }, { value: "split", label: "Split" }, { value: "frame", label: "Frame" }]} />
+            <Segmented<PosterLayout> label="Layout" value={d.poster.layout} onChange={(layout) => setPoster({ layout })} options={[{ value: "bold", label: "Bold" }, { value: "split", label: "Split" }, { value: "frame", label: "Arch" }]} />
             <FormField label="Headline" htmlFor="headline"><TextField id="headline" value={d.poster.headline} onChange={(e) => setPoster({ headline: e.target.value.slice(0, 40) })} /></FormField>
             <FormField label="Offer line" htmlFor="subline"><TextField id="subline" value={d.poster.subline} onChange={(e) => setPoster({ subline: e.target.value.slice(0, 110) })} /></FormField>
             <FormField label="Button text" htmlFor="cta"><TextField id="cta" value={d.poster.cta} onChange={(e) => setPoster({ cta: e.target.value.slice(0, 24) })} /></FormField>
