@@ -5,6 +5,7 @@ import { registerLocalKey } from "@/lib/local-store";
 import { withRetry } from "@/lib/network";
 import { notify } from "@/lib/toast";
 import { createClient } from "@/utils/supabase/client";
+import { SUPABASE_CONFIGURED } from "@/utils/supabase/config";
 
 // A small cache between the UI and Supabase.
 // - Signed in: rows come from / go to Supabase (RLS scopes them to the user).
@@ -24,6 +25,7 @@ export const resetAllData = () => registry.forEach((c) => c.reset());
 export const registerReset = (reset: () => void) => void registry.push({ reset });
 
 export async function currentUserId(): Promise<string | null> {
+  if (!SUPABASE_CONFIGURED) return null;
   const { data } = await createClient().auth.getSession();
   return data.session?.user.id ?? null;
 }

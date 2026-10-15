@@ -5,6 +5,7 @@ import { clearLocalStores } from "@/lib/local-store";
 import { resetAllData } from "@/lib/collection";
 import { getProfile, logout, normalizeUser } from "@/services/auth";
 import { createClient } from "@/utils/supabase/client";
+import { SUPABASE_CONFIGURED } from "@/utils/supabase/config";
 import type { User } from "@/types";
 
 type Status = "loading" | "authenticated" | "guest";
@@ -38,6 +39,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const refresh = useCallback(async () => apply(await getProfile().catch(() => null)), [apply]);
 
   useEffect(() => {
+    // Backend off: nobody is signed in, and there is no session to listen for.
+    if (!SUPABASE_CONFIGURED) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- one-time initial state
+      apply(null);
+      return;
+    }
     const supabase = createClient();
     // onAuthStateChange fires INITIAL_SESSION on mount, so it also performs the first load.
     let lastId: string | null | undefined;

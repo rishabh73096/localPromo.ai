@@ -1,5 +1,6 @@
 import type { User as SupabaseUser } from "@supabase/supabase-js";
 import { createClient } from "@/utils/supabase/client";
+import { SUPABASE_CONFIGURED } from "@/utils/supabase/config";
 import type { Address, User } from "@/types";
 
 type Raw = Record<string, unknown>;
@@ -42,11 +43,17 @@ const AUTH_MESSAGES: Record<string, string> = {
   same_password: "Your new password must be different from the old one.",
 };
 
+// Backend switched off (see utils/supabase/config.ts): fail with a clear message instead of a network error.
+function needBackend() {
+  if (!SUPABASE_CONFIGURED) throw new Error("Accounts are switched off in this demo build. Everything you create is saved in this browser.");
+}
+
 function fail(error: { code?: string; message: string }): never {
   throw new Error((error.code && AUTH_MESSAGES[error.code]) || error.message || "Something went wrong. Please try again.");
 }
 
 export async function register(input: { name: string; email: string; password: string; phone?: string }): Promise<{ hasSession: boolean }> {
+  needBackend();
   const { data, error } = await createClient().auth.signUp({
     email: input.email,
     password: input.password,
@@ -59,16 +66,19 @@ export async function register(input: { name: string; email: string; password: s
 }
 
 export async function login(body: { email: string; password: string }): Promise<User> {
+  needBackend();
   const { data, error } = await createClient().auth.signInWithPassword(body);
   if (error) fail(error);
   return normalizeUser(data.user);
 }
 
 export async function logout() {
+  if (!SUPABASE_CONFIGURED) return;
   await createClient().auth.signOut();
 }
 
 export async function getProfile(): Promise<User | null> {
+  if (!SUPABASE_CONFIGURED) return null;
   const { data } = await createClient().auth.getUser();
   return data.user ? normalizeUser(data.user) : null;
 }
@@ -77,18 +87,21 @@ export async function getProfile(): Promise<User | null> {
 // The recovery email template must include {{ .Token }} (Supabase dashboard > Auth > Email Templates).
 // The "token" threaded through the UI is just the email address.
 export async function sendOtp(email: string): Promise<string> {
+  needBackend();
   const { error } = await createClient().auth.resetPasswordForEmail(email);
   if (error) fail(error);
   return email;
 }
 
 export async function verifyOtp(body: { otp: string; token: string }): Promise<string> {
+  needBackend();
   const { error } = await createClient().auth.verifyOtp({ email: body.token, token: body.otp, type: "recovery" });
   if (error) fail(error);
   return body.token;
 }
 
 export async function changePassword(body: { password: string }) {
+  needBackend();
   const supabase = createClient();
   const { error } = await supabase.auth.updateUser({ password: body.password });
   if (error) fail(error);
@@ -96,6 +109,7 @@ export async function changePassword(body: { password: string }) {
 }
 
 export async function updateProfile(body: { name?: string; phone?: string; businessName?: string; website?: string; address?: Partial<Address>; timezone?: string; bio?: string; location?: Pick<Address, "country" | "state" | "city"> }) {
+  needBackend();
   const { error } = await createClient().auth.updateUser({ data: body });
   if (error) fail(error);
 }
